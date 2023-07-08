@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,800&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+body{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 100vh;
+    background-color:rgb(25, 23, 74);
+
+}
+
+.container h1{
+    font-size: 3.5em;
+    color:darkorange;
+text-align: center;
+margin-top: 10px;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    position: absolute;
+    left: 50px;
+    background-color: white;
+    padding: 2em;
+    border-radius: 2em;
+    margin-top: 10px;
+    
+}
+.todo-container{
+    width: 90%;
+    
+    
+
+
+}
+.input{
+    display: flex;
+    justify-content:space-between ;
+    margin-bottom: 30px;
+    align-items: center;
+    /* border-bottom: 2px solid #ff00fb; */
+}
+
+.input .form-control{
+    background-color: rgb(22, 4, 94);
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    width: 90%;
+    padding: 0px 20px;
+    font-size: 16px;
+    color: rgb(3, 234, 255);
+    box-shadow: -6px -6px 10px rgb(255,255,255,0.03);
+
+}
+
+ .input .form-control:focus{
+   outline: none;
+
+ }
+
+ .add .material-icons{
+    background-color: darkorange;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    border-radius: 50%;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 30px;
+ }
+
+ .todo-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    color: rgb(3, 234, 255);
+    background-color: midnightblue;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top:15px;
+    box-shadow: 0px 5px 10px rgb(0,0,0,0,0.55);
+
+ }
+
+ .left-cont input {
+    display: none;
+    cursor: pointer;
+}
+.left-cont label{
+    position: relative;
+    cursor: pointer;
+}
+.left-cont label:before{
+    content: '';
+    padding: 11px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: #73bde8;
+    border-radius: 3px;
+
+
+}
+
+.left-cont input:checked + label:before{
+    background-color: darkorange;
+
+}
+.left-cont input:checked + label:after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    left: 8px;
+    width: 5px;
+    height: 12px;
+    border: solid #221525;
+    border-width: 0px 2px 2px 0px;
+    transform:  rotate(45deg);
+
+}
+
+.remove{
+    color: #ff0047;
+    cursor: pointer;
+    line-height: 1;
+    transform: translateX(48px);
+    transition: .5s;
+}
+
+.remove.active{
+    transform: translateX(0px);
+    transition: .5s;
+}
